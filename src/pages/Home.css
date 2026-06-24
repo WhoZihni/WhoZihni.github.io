@@ -1,0 +1,262 @@
+.home {
+  text-align: left;
+  width: 100%;
+}
+
+/* ── Section 1: Hero ──────────────────────────────────── */
+.home-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 5rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.home-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.home-tagline {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+}
+
+.home-name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text-h);
+  margin: 0;
+}
+
+.home-bio {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  max-width: 480px;
+  margin: 0;
+}
+
+.home-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-h);
+  border: 1.5px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  opacity: 1;
+}
+
+.home-hero-img-wrap {
+  background-color: var(--border);
+  border-radius: 16px;
+  min-height: 380px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Shared section styles ────────────────────────────── */
+.home-section {
+  padding: 4rem 3rem;
+  border-top: 1px solid var(--border);
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.home-section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.home-section-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text-h);
+  letter-spacing: -0.02em;
+  margin: 0 0 0.4rem;
+}
+
+.home-section-subtitle {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin: 0;
+}
+
+/* ── Skills image ─────────────────────────────────────── */
+.home-skills-img-wrap {
+  background-color: var(--border);
+  border-radius: 12px;
+  min-height: 180px;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-skills-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Card grid ────────────────────────────────────────── */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.home-card {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.home-card:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow);
+}
+
+.home-card-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.home-card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.home-card-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.home-card-desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem 2rem;
+  }
+
+  .home-hero-img-wrap {
+    min-height: 260px;
+    order: -1;
+  }
+
+  .home-name {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .home-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .home-name {
+    font-size: 2rem;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-skills-img-wrap {
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero {
+    padding: 2rem 1rem;
+  }
+
+  .home-section {
+    padding: 2rem 1rem;
+  }
+
+  .home-cta {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
