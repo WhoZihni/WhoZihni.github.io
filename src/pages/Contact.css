@@ -1,0 +1,199 @@
+.contact {
+  text-align: left;
+  width: 100%;
+}
+
+.contact-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3.5rem 3rem 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Header ───────────────────────────────────────────── */
+.contact-header {
+  margin-bottom: 2.5rem;
+}
+
+.contact-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-h);
+  margin: 0 0 0.5rem;
+}
+
+.contact-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+.contact-config-error {
+  font-size: 0.95rem;
+  color: #e05c5c;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid #e05c5c;
+  border-radius: 8px;
+  background-color: rgba(224, 92, 92, 0.08);
+}
+
+/* ── Form layout ──────────────────────────────────────── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Field wrapper ────────────────────────────────────── */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-h);
+  letter-spacing: 0.01em;
+}
+
+/* ── Inputs ───────────────────────────────────────────── */
+.form-input,
+.form-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--bg);
+  color: var(--text-h);
+  font-size: 0.9rem;
+  font-family: var(--sans);
+  line-height: 1.5;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
+  appearance: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+.form-input:disabled,
+.form-textarea:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* ── Error state ──────────────────────────────────────── */
+.form-field-error .form-input,
+.form-field-error .form-textarea {
+  border-color: #e05c5c;
+}
+
+.form-field-error .form-input:focus,
+.form-field-error .form-textarea:focus {
+  border-color: #e05c5c;
+  box-shadow: 0 0 0 3px rgba(224, 92, 92, 0.15);
+}
+
+.form-error-msg {
+  font-size: 0.8rem;
+  color: #e05c5c;
+  font-weight: 500;
+}
+
+/* ── Submit-level feedback ────────────────────────────── */
+.form-submit-error {
+  font-size: 0.875rem;
+  color: #e05c5c;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(224, 92, 92, 0.4);
+  border-radius: 8px;
+  background-color: rgba(224, 92, 92, 0.08);
+}
+
+.form-success {
+  font-size: 0.875rem;
+  color: #3dba6e;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(61, 186, 110, 0.4);
+  border-radius: 8px;
+  background-color: rgba(61, 186, 110, 0.08);
+  font-weight: 500;
+}
+
+/* ── Submit button ────────────────────────────────────── */
+.form-submit {
+  align-self: flex-start;
+  padding: 0.75rem 2rem;
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: var(--sans);
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.form-submit:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.form-submit:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .contact-inner {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .form-submit {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-inner {
+    padding: 2rem 1rem 2.5rem;
+  }
+
+  .contact-title {
+    font-size: 1.75rem;
+  }
+}
