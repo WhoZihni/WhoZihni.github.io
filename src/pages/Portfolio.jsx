@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabaseClient'
-// TODO: Replace with AI-generated image
-import arvynnaImg from '../assets/project-arvynna.png'
-// TODO: Replace with AI-generated image
-import flipiqImg from '../assets/project-flipiq.png'
-import maanImg from '../assets/project-maan.png'
+import arvynnaImg from '../assets/link-arvynna.png'
+import flipiqImg from '../assets/link-flipiq.png'
+import maanImg from '../assets/link-maan.png'
 import './Portfolio.css'
 
 const EDUCATION = [

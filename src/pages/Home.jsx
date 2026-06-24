@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ahmedImg from '../assets/hero.png'
 // TODO: Replace with AI-generated image
 import heroImg from '../assets/home-hero.png'
 // TODO: Replace with AI-generated image
@@ -152,8 +153,17 @@ export default function Home() {
       {/* ── Section 1: Introduction ─────────────────────── */}
       <section className="home-hero">
         <div className="home-hero-content">
-          <p className="home-tagline">Full-Stack Developer</p>
-          <h1 className="home-name">Ahmed Zihni</h1>
+          <div className="home-hero-identity">
+            <img
+              src={ahmedImg}
+              alt="Ahmed Zihni"
+              className="home-avatar"
+            />
+            <div>
+              <p className="home-tagline">Full-Stack Developer</p>
+              <h1 className="home-name">Ahmed Zihni</h1>
+            </div>
+          </div>
           <p className="home-bio">
             I&apos;m a full-stack developer based in Tampa, FL — building across
             the stack with React, Java, and Supabase. Completing the Codeboxx
@@ -172,7 +182,7 @@ export default function Home() {
           <img
             src={heroImg}
             alt="Ahmed Zihni — Full-Stack Developer based in Tampa, FL"
-            className="home-hero-img"
+            className="home-hero-img placeholder-img"
           />
         </div>
       </section>
@@ -189,7 +199,7 @@ export default function Home() {
           <img
             src={skillsImg}
             alt="Visual overview of Ahmed's technical skill areas"
-            className="home-skills-img"
+            className="home-skills-img placeholder-img"
           />
         </div>
 

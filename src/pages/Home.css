@@ -20,6 +20,21 @@
   gap: 1.25rem;
 }
 
+.home-hero-identity {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.home-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+}
+
 .home-tagline {
   font-size: 0.85rem;
   font-weight: 600;
@@ -259,4 +274,10 @@
   .btn {
     width: 100%;
   }
+}
+
+/* ── Placeholder image fallback ───────────────────────── */
+.placeholder-img {
+  background-color: var(--code-bg);
+  min-height: 120px;
 }
