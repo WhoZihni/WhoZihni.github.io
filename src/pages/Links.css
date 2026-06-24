@@ -16,13 +16,13 @@
   font-size: 2.75rem;
   font-weight: 700;
   letter-spacing: -0.03em;
-  color: var(--text-h);
+  color: var(--color-text-primary);
   margin: 0 0 0.4rem;
 }
 
 .links-subtitle {
   font-size: 0.95rem;
-  color: var(--text);
+  color: var(--color-text-secondary);
   margin: 0;
 }
 
@@ -30,14 +30,14 @@
 .links-status {
   text-align: center;
   font-size: 0.95rem;
-  color: var(--text);
+  color: var(--color-text-secondary);
   padding: 2rem 3rem;
   max-width: 720px;
   margin: 0 auto;
 }
 
 .links-error {
-  color: #e05c5c;
+  color: var(--color-error);
 }
 
 /* ── Link list ────────────────────────────────────────── */
@@ -59,22 +59,22 @@
   align-items: center;
   gap: 1.25rem;
   padding: 1.25rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--color-border);
   border-radius: 14px;
-  background-color: var(--code-bg);
+  background-color: var(--color-card-bg);
   text-decoration: none;
   color: inherit;
   transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .link-card:hover {
-  border-color: var(--accent-border);
+  border-color: var(--color-accent-border);
   box-shadow: var(--shadow);
   transform: translateY(-2px);
 }
 
 .link-card:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
 
@@ -83,7 +83,7 @@
   width: 80px;
   height: 80px;
   border-radius: 10px;
-  background-color: var(--border);
+  background-color: var(--color-bg-secondary);
   overflow: hidden;
   flex-shrink: 0;
   display: flex;
@@ -111,14 +111,14 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--color-accent);
   font-family: var(--mono);
 }
 
 .link-card-label {
   font-size: 0.975rem;
   font-weight: 600;
-  color: var(--text-h);
+  color: var(--color-text-primary);
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -128,7 +128,7 @@
 .link-card-desc {
   font-size: 0.825rem;
   line-height: 1.55;
-  color: var(--text);
+  color: var(--color-text-secondary);
   margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -140,7 +140,7 @@
 .link-card-arrow {
   width: 32px;
   height: 32px;
-  color: var(--text);
+  color: var(--color-text-secondary);
   flex-shrink: 0;
   transition: color 0.15s ease, transform 0.15s ease;
 }
@@ -151,7 +151,7 @@
 }
 
 .link-card:hover .link-card-arrow {
-  color: var(--accent);
+  color: var(--color-accent);
   transform: translate(2px, -2px);
 }
 
