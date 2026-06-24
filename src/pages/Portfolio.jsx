@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-import { supabase } from '../lib/supabaseClient'
 import arvynnaImg from '../assets/link-arvynna.png'
 import flipiqImg from '../assets/link-flipiq.png'
 import maanImg from '../assets/link-maan.png'
@@ -56,36 +54,37 @@ const EXPERIENCE = [
   },
 ]
 
-const FEATURED_PROJECTS = [
+const PROJECTS = [
   {
     id: 'arvynna',
     name: 'Arvynna AI',
+    tech: 'React, Node.js, GHL, Stripe, Netlify',
     description:
-      'An AI-powered lead follow-up SaaS targeting contractors in Tampa Bay. Automates outreach sequences and follow-up messages using GoHighLevel automation and Stripe billing. Currently offline — codebase coming soon.',
-    tags: ['React', 'Node.js', 'GHL', 'Stripe', 'Netlify'],
+      'An AI-powered lead follow-up SaaS targeting contractors in Tampa Bay. Automates outreach sequences and follow-up messages using GoHighLevel automation and Stripe billing.',
+    note: 'Currently offline',
+    image: arvynnaImg,
     github_url: null,
     live_url: null,
-    image: arvynnaImg,
   },
   {
     id: 'flipiq',
     name: 'FlipIQ',
+    tech: 'Next.js 15, Supabase, Anthropic API, RapidAPI, Vercel',
     description:
-      'A house-flipping analysis PWA for real estate investors. Pulls live property data and uses AI to analyze flip potential, repair estimates, and ROI.',
-    tags: ['Next.js 15', 'Supabase', 'Anthropic API', 'RapidAPI', 'Vercel'],
+      'A house-flipping analysis PWA built for real estate investors. Uses AI to analyze flip potential, repair estimates, and ROI.',
+    image: flipiqImg,
     github_url: null,
     live_url: 'https://flipiq-five.vercel.app',
-    image: flipiqImg,
   },
   {
     id: 'maan',
     name: 'Maan Academy',
+    tech: 'Next.js, Framer Motion',
     description:
-      "A school website for Ma'an Arabic Montessori Academy, a co-op in Tampa. Features enrollment info, program details, and contact.",
-    tags: ['Next.js', 'Framer Motion'],
+      "A school website for Ma'an Arabic Montessori Academy in Tampa. Features enrollment info, program details, and contact.",
+    image: maanImg,
     github_url: 'https://github.com/WhoZihni/Maan-website',
     live_url: null,
-    image: maanImg,
   },
 ]
 
@@ -124,19 +123,18 @@ function ProjectCard({ project }) {
         {project.image && (
           <img
             src={project.image}
-            alt={`${project.name} project screenshot`}
+            alt={`${project.name} logo`}
             className="project-img"
           />
         )}
       </div>
       <div className="project-content">
         <h3 className="project-name">{project.name}</h3>
-        <div className="project-tags">
-          {(project.tags || []).map((tag) => (
-            <span key={tag} className="project-tag">{tag}</span>
-          ))}
-        </div>
+        <p className="project-tech">{project.tech}</p>
         <p className="project-desc">{project.description}</p>
+        {project.note && (
+          <p className="project-note">{project.note}</p>
+        )}
         <div className="project-links">
           {project.github_url && (
             <a
@@ -167,28 +165,6 @@ function ProjectCard({ project }) {
 }
 
 export default function Portfolio() {
-  const [projects, setProjects] = useState(FEATURED_PROJECTS)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    if (!supabase) return
-
-    setLoading(true)
-    supabase
-      .from('projects')
-      .select('*')
-      .order('display_order', { ascending: true })
-      .then(({ data, error: fetchError }) => {
-        setLoading(false)
-        if (fetchError) {
-          setError(fetchError.message)
-          return
-        }
-        if (data && data.length > 0) setProjects(data)
-      })
-  }, [])
-
   return (
     <div className="portfolio">
 
@@ -253,26 +229,11 @@ export default function Portfolio() {
           <span className="section-title-accent">03</span>
           Projects
         </h2>
-
-        {loading && <p className="portfolio-status">Loading projects…</p>}
-
-        {error && (
-          <p className="portfolio-status portfolio-error">
-            Failed to load projects: {error}
-          </p>
-        )}
-
-        {!loading && !error && projects.length === 0 && (
-          <p className="portfolio-status">No projects to display yet.</p>
-        )}
-
-        {!loading && projects.length > 0 && (
-          <div className="project-grid">
-            {projects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-        )}
+        <div className="project-grid">
+          {PROJECTS.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
       </section>
 
     </div>
