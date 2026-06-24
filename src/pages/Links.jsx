@@ -25,7 +25,7 @@ const FEATURED_LINKS = [
     label: 'LinkedIn — Ahmed Zihni',
     description:
       'My professional profile with work history, skills, and recommendations. Open to junior developer roles and internships.',
-    url: 'https://www.linkedin.com/in/ahmedzihni',
+    url: 'https://www.linkedin.com/in/ahmed-zihni-4443b03a5/',
     category: 'Social',
     display_order: 2,
     image: linkedinImg,
@@ -34,7 +34,7 @@ const FEATURED_LINKS = [
     id: 'arvynna',
     label: 'Arvynna AI',
     description:
-      'An AI-powered lead follow-up SaaS I built for contractors. Automates outreach and follow-up sequences using GoHighLevel and Stripe.',
+      'An AI-powered lead follow-up SaaS I built for contractors. Automates outreach and follow-up sequences using GoHighLevel and Stripe. Currently offline — codebase coming soon.',
     url: 'https://arvynna.com',
     category: 'Projects',
     display_order: 3,
@@ -55,7 +55,7 @@ const FEATURED_LINKS = [
     label: 'Maan Arabic Montessori Academy',
     description:
       'A school website I built for a Montessori co-op in Tampa using Next.js and Framer Motion.',
-    url: 'https://maanacademy.org',
+    url: 'https://github.com/WhoZihni/Maan-website',
     category: 'Projects',
     display_order: 5,
     image: maanImg,

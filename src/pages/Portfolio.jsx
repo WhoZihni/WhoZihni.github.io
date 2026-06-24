@@ -63,10 +63,10 @@ const FEATURED_PROJECTS = [
     id: 'arvynna',
     name: 'Arvynna AI',
     description:
-      'An AI-powered lead follow-up SaaS targeting contractors in Tampa Bay. Automates outreach sequences and follow-up messages using GoHighLevel automation and Stripe billing.',
+      'An AI-powered lead follow-up SaaS targeting contractors in Tampa Bay. Automates outreach sequences and follow-up messages using GoHighLevel automation and Stripe billing. Currently offline — codebase coming soon.',
     tags: ['React', 'Node.js', 'GHL', 'Stripe', 'Netlify'],
     github_url: null,
-    live_url: 'https://arvynna.com',
+    live_url: null,
     image: arvynnaImg,
   },
   {
@@ -83,10 +83,10 @@ const FEATURED_PROJECTS = [
     id: 'maan',
     name: 'Maan Academy',
     description:
-      "A school website for Ma’an Arabic Montessori Academy, a co-op in Tampa. Features enrollment info, program details, and contact.",
+      "A school website for Ma'an Arabic Montessori Academy, a co-op in Tampa. Features enrollment info, program details, and contact.",
     tags: ['Next.js', 'Framer Motion'],
-    github_url: null,
-    live_url: 'https://maanacademy.org',
+    github_url: 'https://github.com/WhoZihni/Maan-website',
+    live_url: null,
     image: maanImg,
   },
 ]
