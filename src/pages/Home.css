@@ -1,29 +1,19 @@
 .home {
-  text-align: left;
   width: 100%;
 }
 
 /* ── Section 1: Hero ──────────────────────────────────── */
 .home-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  padding: 5rem 3rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.home-hero-content {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-}
-
-.home-hero-identity {
-  display: flex;
   align-items: center;
-  gap: 1.25rem;
+  text-align: center;
+  padding: 5rem 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 1rem;
 }
 
 .home-avatar {
@@ -32,9 +22,9 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  flex-shrink: 0;
   border: 3px solid var(--color-border);
   margin-bottom: 0.5rem;
+  flex-shrink: 0;
 }
 
 .home-tagline {
@@ -59,7 +49,7 @@
   font-size: 1rem;
   line-height: 1.7;
   color: var(--color-text-secondary);
-  max-width: 480px;
+  max-width: 540px;
   margin: 0;
 }
 
@@ -67,7 +57,9 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 0.5rem;
+  width: 100%;
 }
 
 .btn {
@@ -105,23 +97,6 @@
   border-color: var(--color-accent);
   color: var(--color-accent);
   opacity: 1;
-}
-
-.home-hero-img-wrap {
-  background-color: var(--color-border);
-  border-radius: 16px;
-  min-height: 380px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 /* ── Shared section styles ────────────────────────────── */
@@ -229,23 +204,6 @@
 }
 
 /* ── Responsive ───────────────────────────────────────── */
-@media (max-width: 900px) {
-  .home-hero {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 3rem 2rem;
-  }
-
-  .home-hero-img-wrap {
-    min-height: 260px;
-    order: -1;
-  }
-
-  .home-name {
-    font-size: 2.5rem;
-  }
-}
-
 @media (max-width: 768px) {
   .home-hero {
     padding: 2.5rem 1.5rem;

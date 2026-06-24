@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom'
 import ahmedImg from '../assets/ahmed.png'
-// TODO: Replace with AI-generated image
-import heroImg from '../assets/home-hero.png'
-// TODO: Replace with AI-generated image
 import skillsImg from '../assets/home-skills.png'
 import './Home.css'
 
@@ -152,38 +149,23 @@ export default function Home() {
 
       {/* ── Section 1: Introduction ─────────────────────── */}
       <section className="home-hero">
-        <div className="home-hero-content">
-          <div className="home-hero-identity">
-            <img
-              src={ahmedImg}
-              alt="Ahmed Zihni"
-              className="home-avatar"
-            />
-            <div>
-              <p className="home-tagline">Full-Stack Developer</p>
-              <h1 className="home-name">Ahmed Zihni</h1>
-            </div>
-          </div>
-          <p className="home-bio">
-            I&apos;m a full-stack developer based in Tampa, FL — building across
-            the stack with React, Java, and Supabase. Completing the Codeboxx
-            Full-Stack bootcamp alongside an A.A. in Computer Science at HCC,
-            transferring to USF for a B.S. in CS. I work fluently in English
-            and Arabic.
-          </p>
-          <div className="home-cta">
-            <Link to="/portfolio" className="btn btn-primary">View Portfolio</Link>
-            <Link to="/contact" className="btn btn-secondary">Contact Me</Link>
-          </div>
-        </div>
-
-        <div className="home-hero-img-wrap">
-          {/* TODO: Replace with AI-generated image */}
-          <img
-            src={heroImg}
-            alt="Ahmed Zihni — Full-Stack Developer based in Tampa, FL"
-            className="home-hero-img placeholder-img"
-          />
+        <img
+          src={ahmedImg}
+          alt="Ahmed Zihni"
+          className="home-avatar"
+        />
+        <p className="home-tagline">Full-Stack Developer</p>
+        <h1 className="home-name">Ahmed Zihni</h1>
+        <p className="home-bio">
+          I&apos;m a full-stack developer based in Tampa, FL — building across
+          the stack with React, Java, and Supabase. Completing the Codeboxx
+          Full-Stack bootcamp alongside an A.A. in Computer Science at HCC,
+          transferring to USF for a B.S. in CS. I work fluently in English
+          and Arabic.
+        </p>
+        <div className="home-cta">
+          <Link to="/portfolio" className="btn btn-primary">View Portfolio</Link>
+          <Link to="/contact" className="btn btn-secondary">Contact Me</Link>
         </div>
       </section>
 
