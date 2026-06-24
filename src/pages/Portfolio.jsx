@@ -197,8 +197,7 @@ export default function Portfolio() {
           <h1 className="portfolio-title">Portfolio</h1>
           <p className="portfolio-subtitle">Education, experience, and shipped projects</p>
         </div>
-        {/* TODO: Add actual resume PDF to public/ folder */}
-        <a href="/resume.pdf" className="btn-resume" download>
+        <a href="/resume.pdf" className="btn-resume" download="Ahmed_Zihni_Resume.pdf">
           <IconDownload />
           Download Resume
         </a>
