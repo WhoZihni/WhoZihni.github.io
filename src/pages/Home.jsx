@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import ahmedImg from '../assets/hero.png'
+import ahmedImg from '../assets/ahmed.png'
 // TODO: Replace with AI-generated image
 import heroImg from '../assets/home-hero.png'
 // TODO: Replace with AI-generated image
