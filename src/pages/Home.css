@@ -82,6 +82,8 @@
   transition: opacity 0.15s ease, box-shadow 0.15s ease;
   cursor: pointer;
   border: none;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .btn:hover {
@@ -264,6 +266,15 @@
   .home-skills-img-wrap {
     min-height: 120px;
   }
+
+  .home-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -273,13 +284,5 @@
 
   .home-section {
     padding: 2rem 1rem;
-  }
-
-  .home-cta {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
   }
 }
