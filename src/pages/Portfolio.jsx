@@ -1,6 +1,8 @@
 import arvynnaImg from '../assets/link-arvynna.png'
 import flipiqImg from '../assets/link-flipiq.png'
 import maanImg from '../assets/link-maan.png'
+import portfolioHeroImg from '../assets/portfolio-hero.png'
+import portfolioProjectsImg from '../assets/portfolio-projects.png'
 import './Portfolio.css'
 
 const EDUCATION = [
@@ -179,6 +181,15 @@ export default function Portfolio() {
         </a>
       </div>
 
+      {/* AI-generated hero banner */}
+      <div className="portfolio-banner-wrap">
+        <img
+          src={portfolioHeroImg}
+          alt="Portfolio — Ahmed Zihni full-stack developer"
+          className="portfolio-banner-img"
+        />
+      </div>
+
       {/* ── Section 1: Education ─────────────────────────── */}
       <section className="portfolio-section">
         <h2 className="section-title">
@@ -222,6 +233,15 @@ export default function Portfolio() {
           ))}
         </div>
       </section>
+
+      {/* AI-generated decorative divider between experience and projects */}
+      <div className="portfolio-banner-wrap portfolio-banner-inset">
+        <img
+          src={portfolioProjectsImg}
+          alt="Projects — shipped work by Ahmed Zihni"
+          className="portfolio-banner-img"
+        />
+      </div>
 
       {/* ── Section 3: Projects ──────────────────────────── */}
       <section className="portfolio-section">

@@ -63,6 +63,41 @@
   opacity: 0.85;
 }
 
+/* ── Banner images (AI-generated) ────────────────────── */
+.portfolio-banner-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+
+.portfolio-banner-inset {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.portfolio-banner-img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .portfolio-banner-wrap {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-banner-wrap {
+    padding: 0 1rem;
+  }
+}
+
 /* ── Shared section ───────────────────────────────────── */
 .portfolio-section {
   border-top: 1px solid var(--color-border);

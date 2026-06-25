@@ -3,6 +3,7 @@ import linkedinImg from '../assets/link-linkedin.png'
 import arvynnaImg from '../assets/link-arvynna.png'
 import flipiqImg from '../assets/link-flipiq.png'
 import maanImg from '../assets/link-maan.png'
+import linksHeroImg from '../assets/links-hero.png'
 import './Links.css'
 
 const LINKS = [
@@ -91,6 +92,15 @@ export default function Links() {
       <div className="links-header">
         <h1 className="links-title">Links</h1>
         <p className="links-subtitle">Profiles, projects, and everything in between</p>
+      </div>
+
+      {/* AI-generated hero banner */}
+      <div className="links-banner-wrap">
+        <img
+          src={linksHeroImg}
+          alt="Links — Ahmed Zihni profiles and projects"
+          className="links-banner-img"
+        />
       </div>
       <div className="links-list">
         {LINKS.map((link) => (

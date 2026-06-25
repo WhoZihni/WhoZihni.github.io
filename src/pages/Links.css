@@ -26,6 +26,37 @@
   margin: 0;
 }
 
+/* ── Hero banner (AI-generated) ──────────────────────── */
+.links-banner-wrap {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.links-banner-img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .links-banner-wrap {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .links-banner-wrap {
+    padding: 0 1rem;
+  }
+}
+
 /* ── Status messages ──────────────────────────────────── */
 .links-status {
   text-align: center;

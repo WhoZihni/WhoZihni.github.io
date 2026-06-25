@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import ahmedImg from '../assets/ahmed.png'
-import skillsImg from '../assets/home-skills.png'
+import skillsBgImg from '../assets/home-skills-bg.png'
+import softskillsBgImg from '../assets/home-softskills-bg.png'
 import './Home.css'
 
 function IconCode() {
@@ -176,12 +177,12 @@ export default function Home() {
           <p className="home-section-subtitle">Technologies I build with every day</p>
         </div>
 
+        {/* AI-generated banner */}
         <div className="home-skills-img-wrap">
-          {/* TODO: Replace with AI-generated image */}
           <img
-            src={skillsImg}
-            alt="Visual overview of Ahmed's technical skill areas"
-            className="home-skills-img placeholder-img"
+            src={skillsBgImg}
+            alt="Technical skills — JavaScript, React, Java, Supabase, Git"
+            className="home-skills-img"
           />
         </div>
 
@@ -201,6 +202,15 @@ export default function Home() {
         <div className="home-section-header">
           <h2 className="home-section-title">What I Bring</h2>
           <p className="home-section-subtitle">Beyond the stack</p>
+        </div>
+
+        {/* AI-generated banner */}
+        <div className="home-skills-img-wrap">
+          <img
+            src={softskillsBgImg}
+            alt="Soft skills — problem solving, communication, entrepreneurial mindset"
+            className="home-skills-img"
+          />
         </div>
 
         <div className="home-grid">
