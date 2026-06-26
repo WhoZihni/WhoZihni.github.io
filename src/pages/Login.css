@@ -1,0 +1,150 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-primary);
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* ── Card ─────────────────────────────────────────────── */
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-sizing: border-box;
+  box-shadow: var(--shadow);
+}
+
+/* ── Header ───────────────────────────────────────────── */
+.login-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.login-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-family: var(--mono);
+  margin: 0 0 0.5rem;
+}
+
+.login-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* ── Form ─────────────────────────────────────────────── */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.login-field-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-align: left;
+}
+
+.login-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+  font-family: var(--sans);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  appearance: none;
+}
+
+.login-input::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
+.login-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-bg);
+}
+
+.login-input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ── Error ────────────────────────────────────────────── */
+.login-error {
+  font-size: 0.85rem;
+  color: var(--color-error);
+  font-weight: 500;
+  margin: 0;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--color-error-border);
+  border-radius: 8px;
+  background-color: var(--color-error-bg);
+  text-align: left;
+}
+
+/* ── Submit ───────────────────────────────────────────── */
+.login-submit {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: var(--sans);
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.login-submit:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.login-submit:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.login-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 2rem 1.25rem;
+    border-radius: 12px;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+}

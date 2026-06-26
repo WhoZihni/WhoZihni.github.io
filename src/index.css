@@ -1,0 +1,101 @@
+:root {
+  /* ── Palette ───────────────────────────────────────────── */
+  --color-bg-primary:      #F5F0E8;
+  --color-bg-secondary:    #EDE8DC;
+  --color-bg-dark:         #1B2A4A;
+  --color-accent:          #1E3A8A;
+  --color-accent-hover:    #1D4ED8;
+  --color-accent-bg:       rgba(30, 58, 138, 0.1);
+  --color-accent-border:   rgba(30, 58, 138, 0.4);
+  --color-text-primary:    #1B2A4A;
+  --color-text-secondary:  #4A5568;
+  --color-text-light:      #F5F0E8;
+  --color-text-muted-dark: rgba(245, 240, 232, 0.6);
+  --color-border:          #D4CBB5;
+  --color-border-dark:     rgba(245, 240, 232, 0.12);
+  --color-card-bg:         #FFFFFF;
+  --color-success:         #2D6A4F;
+  --color-success-bg:      rgba(45, 106, 79, 0.08);
+  --color-success-border:  rgba(45, 106, 79, 0.35);
+  --color-error:           #C0392B;
+  --color-error-bg:        rgba(192, 57, 43, 0.08);
+  --color-error-border:    rgba(192, 57, 43, 0.35);
+  --shadow:
+    rgba(27, 42, 74, 0.12) 0 10px 15px -3px,
+    rgba(27, 42, 74, 0.06) 0 4px 6px -2px;
+
+  /* ── Typography ────────────────────────────────────────── */
+  --sans:    system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono:    ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--color-text-primary);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--color-bg-secondary);
+}
